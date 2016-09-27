@@ -1,32 +1,12 @@
-# About
+被称为曾经拯救过银河系的男人:
 
-This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
+ただの人间には兴味ありません この中に宇宙人 ·未来人·超能力者がいだら あたしのところに来なさいっ 
+以上 
 
-You can visit [here](http://gaohaoyang.github.io) to see this blog.
+我对普通的人类没有兴趣。你们之中要是有外星人、未来人、异世界的人、超能力者。就尽管来找我吧!以上。 
 
----
-
-这是我的博客，基于 jekyll。我改了所有默认的样式和交互。如果你想使用这个博客模板。**请先在这个仓库上点个star吧**，这也是对我的肯定和鼓励，谢谢了。然后你可以克隆这个仓库用作你自己的博客。
-
-博客访问地址：[点击这里](http://gaohaoyang.github.io)
-
-**使用时请注明模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
-
-<!--
-
-## 被引用信息
-
-使用了我的模板并写明来源的人：   
-
-* [dreamholy](http://dreamholy.github.io/)
-
-没有注明来源的人：
-
-* [yangshuailing](http://yangshuailing.github.io/com/)
-* [huapu728](http://huapu728.github.io/)
-* [greatbuger](http://greatbuger.github.io/) 
+异次元的封印之门：[点击这里](http://xmky.github.io)
 
 
--->
 
 
