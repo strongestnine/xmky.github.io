@@ -1,88 +1,64 @@
 ---
 layout: default
 ---
-<script src="{{ "/styles/index.js" | prepend: site.baseurl }}"></script>
-<div>
-  <a id="posts-btn" class="waves-effect waves-teal btn-flat btn-large" onclick="show_posts();">{{ site.posts_btn }}</a>
-  <a id="projects-btn" class="waves-effect waves-teal btn-flat btn-large" onclick="show_projects();">{{ site.projects_btn }}</a>
-</div>
-<div id="posts">
-
-  <h2 class="my-mini-heading">{{ site.posts_btn }}</h2>
-
-  <ul>
-    {% for post in site.posts %}
-    <li>
-      <p class="my-item">
-        <a href="{{ post.url | prepend: site.baseurl }}" class="my-link">{{ post.title }}</a><br>
-        <span class="my-item-sub">{{ post.date | date: "%b %-d, %Y" }}</span>
-      </p>
-    </li>
-    {% endfor %}
-    <li>
-      <p class="my-item">
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="my-link">RSS</a> / <a href="{{ "/atom.xml" | prepend: site.baseurl }}" class="my-link">ATOM</a><br>
-        <span class="my-item-sub"><i class="fa fa-rss" aria-hidden="true"></i> {{ site.rss_badge }}</span>
-    </li>
-  </ul>
-
-  <div>
-    <a onclick="hide_lists();" class="waves-effect waves-teal btn-flat btn-large">{{ site.close_btn }}</a>
+<div id="index" class="row">
+  <div class="col-sm-9">
+    <div class="post-area">
+      <!-- small button -->
+     <!--  <p class="pull-right visible-xs">
+       <button>toggle</button>
+     </p> -->
+      <div class="post-list-header">
+        Posts
+      </div>
+      <div class="post-list-body">
+        
+        <div class="all-posts" post-cate="All">
+          {% for post in site.posts %}
+            <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
+              <h2>
+              {{ post.title }}
+              </h2>
+              <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </a>
+          {% endfor %}
+        </div>
+        <!-- <div class="posts-in-categories"> -->
+        {% for category in site.categories %}
+          <div post-cate="{{category | first}}">
+            {% for posts in category  %}
+              {% for post in posts %}
+                {% if post.url %}
+                  <a href="{{ post.url }}" class="post-list-item">
+                    <h2>
+                    {{ post.title }}
+                    </h2>
+                    <span class="">{{ post.date | date: "%b %-d, %Y" }}</span>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+        
+        <!-- </div> -->
+      </div>
+    </div>
   </div>
-</div>
-
-
-<div id="projects">
-  <h2 class="my-mini-heading">{{ site.projects_btn }}</h2>
-  <ul>
-    {% for project in site.data.projects %}
-    <li>
-      <p class="my-item"><a href="{{ project.link }}" class="my-link">{{ project.name }}</a><br>
-        <span class="my-item-sub">
-        {{ project.description }}
-      </span>
-      </p>
-    </li>
-    {% endfor %}
-  </ul>
-  <div>
-    <a onclick="hide_lists();" class="waves-effect waves-teal btn-flat btn-large">{{ site.close_btn }}</a>
-  </div>
-</div>
-
-<noscript>
-  <div id="posts-noscript">
-
-    <h2 class="my-mini-heading">{{ site.posts_btn }}</h2>
-
-    <ul>
-      {% for post in site.posts %}
-      <li>
-        <p class="my-item">
-          <a href="{{ post.url | prepend: site.baseurl }}" class="my-link">{{ post.title }}</a><br>
-          <span class="my-item-sub">{{ post.date | date: "%b %-d, %Y" }}</span>
-        </p>
-      </li>
+  <div class="col-sm-3">
+    <div class="shadow-corner-curl hidden-xs">
+      <div class="categories-list-header">
+        Categories
+      </div>
+      
+      <a href="javascript:;" class="categories-list-item" cate="All">
+        All<span class="my-badge"> {{site.categories | size}}</span>
+      </a>
+      {% for category in site.categories %}
+        <a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
+          {{ category | first }} <span class="my-badge">{{ category | last | size }}</span>
+        </a>
       {% endfor %}
-      <li>
-        <p class="my-item">
-          <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="my-link">RSS</a> / <a href="{{ "/atom.xml" | prepend: site.baseurl }}" class="my-link">ATOM</a><br>
-          <span class="my-item-sub"><i class="fa fa-rss" aria-hidden="true"></i> {{ site.rss_badge }}</span>
-      </li>
-    </ul>
+    </div>
   </div>
-  <div id="projects-noscript">
-    <h2 class="my-mini-heading">{{ site.projects_btn }}</h2>
-    <ul>
-      {% for project in site.data.projects %}
-      <li>
-        <p class="my-item"><a href="{{ project.link }}" class="my-link">{{ project.name }}</a><br>
-          <span class="my-item-sub">
-        {{ project.description }}
-      </span>
-        </p>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</noscript>
+</div>
