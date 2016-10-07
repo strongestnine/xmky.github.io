@@ -210,7 +210,7 @@ label.line {
 .about p{
 	text-align:center;
 	font-size:14px;
-	color:#000;
+	color:#666;
 	line-height:27px;
 	width:60%;
 	margin:0 auto;
@@ -1083,8 +1083,8 @@ input[type="submit"]:hover{
 		margin-top: 0.6em;
 	}
 	.total-project {
-		top: -30%;
-		left: 38.5%;
+		top: -24%;
+		left: 40%;
 	}
 	.clientsgrid {
 		left: 10.5%;
@@ -1093,11 +1093,11 @@ input[type="submit"]:hover{
 		left: 73.5%;
 	}
 	.clientsgrid div {
-		left: -40px;
+		left: -20px;
 		top: 71px;
 	}
 	.people-grid div {
-		left: -12px;
+		left: 20px;
 	}
 	.resp-tab-item {
 		margin:0 0.4em 0;
@@ -1194,7 +1194,7 @@ input[type="submit"]:hover{
 	}
 	.total-project {
 		top: -30%;
-		left: 34.5%;
+		left: 50%;
 	}
 	.clientsgrid {
 		left: 3.5%;
@@ -1207,7 +1207,7 @@ input[type="submit"]:hover{
 		left: 13px;
 	}
 	.people-grid div {
-		left: -33px;
+		left: -40px;
 	}
 	.resp-tab-item {
 		font-size: 1em;
