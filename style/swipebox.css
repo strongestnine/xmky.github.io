@@ -87,7 +87,9 @@ html.swipebox-html.swipebox-touch {
   top: 0;
   left: 0;
 }
-#swipebox-slider .slide-loading {
+ .slide-loading {
+  width: 100px;
+  height: 100px;
   background: url(../images/loader.gif) no-repeat center center;
 }
 
