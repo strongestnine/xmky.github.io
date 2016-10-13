@@ -1221,29 +1221,3 @@ input[type="submit"]:hover{
 .xiangmu{
 	text-align: center;
 }
-#swipebox-slider .slide:before {
-  content: "";
-  display: block;
-  background: url(../images/loader.gif) no-repeat center center;
-  height: 100%!important;
-  width: 100%!important;
-  color: #fff;
-  margin-right: -1px;
-}
-#swipebox-slider .slide {
-	position: relative;
-}
-#swipebox-slider .slide img {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%,0);
-  max-height: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  height: auto;
-  vertical-align: middle;
-}
